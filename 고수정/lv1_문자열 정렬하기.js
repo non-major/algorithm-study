@@ -8,7 +8,22 @@ function solution(strings, n) {
     }
     console.log(arr);
     // arr = [['sun', 'u'], ['bed', 'e'], ['car', 'a']]
-    
+    arr.sort((a, b) => {
+        let diff = a[1].charCodeAt() - b[1].charCodeAt();
+        if(diff > 0){
+            return diff;
+        }
+        if(diff < 0){
+            return diff;
+        }
+        if(diff = 0){
+            return 0;
+        }
+})
+
+for(let x of arr){
+    answer.push(x[0]);
+}
 
     return answer;
 }
