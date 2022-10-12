@@ -1,13 +1,14 @@
 //https://school.programmers.co.kr/learn/courses/30/lessons/12951
 function solution(s) {
-    let array = s.split(' ').filter(x => x !== ' ').map((x)=> {
+    let arrayLower = s.split(' ').filter(x => x !== ' ').map((x)=> {
         return x.toLowerCase()
     })
-    array = array.map(x=>{
+    arrayFirstCapital = arrayLower.map(x=>{
         [first, ...rest] = x
         return first.toUpperCase().concat(rest.join('')); 
     })
-    return array.join(' ');
+    return arrayFirstCapital.join(' ');
 }
 
 // map 두 번 쓰는 거 축약해보기? 
+// join은 array prototype method, concat은 array와 string prototype method
