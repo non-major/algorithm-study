@@ -16,3 +16,6 @@ solution("for the last week"); //	"For The Last Week"
 solution("for  the last week");
 
 // https://school.programmers.co.kr/learn/courses/30/lessons/12951
+
+let age = [1,2,3];
+console.log(Math.max(...age));

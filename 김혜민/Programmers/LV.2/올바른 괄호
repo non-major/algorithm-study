@@ -1,0 +1,36 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/12909
+
+
+function solution(s){    
+    let stack = [];    
+    for(let i = 0; i < s.length; i++) {
+        if(s[i] === "(") {
+            stack.push("(");
+        } else {
+            if (i === 0) return false;
+            stack.pop();
+        }
+    }
+    return stack.length === 0;
+}
+
+// function solution(s){
+//     let stackCount = 0;
+//     for (let i = 0; i < s.length; i++) {
+//         stackCount += s[i] === '(' ? 1 : -1;
+//         if (stackCount < 0) return false;
+//     }
+//     return stackCount === 0;
+// }
+
+
+solution("()()");
+console.log("===");
+
+solution("(())()");
+console.log("===");
+
+solution(")()(");
+console.log("===");
+
+solution("(()(");
